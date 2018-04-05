@@ -5,8 +5,8 @@ import org.springframework.boot.runApplication
 
 // same as @Configuration @EnableAutoConfiguration @ComponentScan
 @SpringBootApplication
-class DemoKotlin2Application
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<DemoKotlin2Application>(*args)
+    runApplication<Application>(*args)
 }

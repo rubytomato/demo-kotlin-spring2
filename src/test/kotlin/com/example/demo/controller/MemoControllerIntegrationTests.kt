@@ -1,6 +1,6 @@
 package com.example.demo.controller
 
-import com.example.demo.DemoKotlin2Application
+import com.example.demo.Application
 import com.example.demo.entity.Memo
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner
  * 結合テスト
  */
 @RunWith(SpringRunner::class)
-@SpringBootTest(classes = [DemoKotlin2Application::class],
+@SpringBootTest(classes = [Application::class],
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MemoControllerIntegrationTests {
 
