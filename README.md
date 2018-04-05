@@ -18,11 +18,11 @@ gradle clean build
 ### executable jar
 
 ```text
-java -jar build\libs\demo-kotlin2-0.0.1-SNAPSHOT.jar
+java -jar build\libs\demo-kotlin-spring2-0.0.1-SNAPSHOT.jar
 ```
 
 ```text
-java -jar -Dspring.profiles.active=dev build\libs\demo-kotlin2-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=dev build\libs\demo-kotlin-spring2-0.0.1-SNAPSHOT.jar
 ```
 
 ### spring boot gradle plugin
