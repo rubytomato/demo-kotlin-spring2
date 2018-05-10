@@ -1,10 +1,10 @@
 # Kotlin With Spring Boot 2.0 Rest API application
 
-環境
+Development environment
 
 * Java 1.8.0
-* Kotlin 1.2.30
-* Spring Boot 2.0.1
+* Kotlin 1.2.31
+* Spring Boot 2.0.2
 * Gradle 4.5.1
 
 ## compile
@@ -18,11 +18,13 @@ gradle clean build
 ### executable jar
 
 ```text
-java -jar build\libs\demo-kotlin-spring2-0.0.2-SNAPSHOT.jar
+java -jar .\build\libs\demo.jar
 ```
 
+Specify a profile
+
 ```text
-java -jar -Dspring.profiles.active=dev build\libs\demo-kotlin-spring2-0.0.2-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=dev .\build\libs\demo.jar
 ```
 
 ### spring boot gradle plugin
@@ -31,7 +33,7 @@ java -jar -Dspring.profiles.active=dev build\libs\demo-kotlin-spring2-0.0.2-SNAP
 gradle bootRun
 ```
 
-### api
+### API
 
 #### get
 

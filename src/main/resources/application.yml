@@ -14,7 +14,6 @@ spring:
     url: jdbc:mysql://localhost:3306/demo_db?useSSL=false
     username: demo_user
     password: demo_pass
-    driver-class-name: com.mysql.jdbc.Driver
     hikari:
       connection-test-query: select 1
       connection-timeout: 10000
@@ -46,22 +45,26 @@ server:
     context-path: /app
   port: 9000
 
+
+logging.file: demo.log
 logging:
-  file: demo-kotlin-spring2.log
+  file:
+    max-size: 50MB
+    max-history: 10
   level:
-    root: INFO
-    org.springframework: INFO
-#    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
-#    org.springframework.transaction: TRACE
-    org.hibernate: INFO
-    org.hibernate.SQL: DEBUG
-#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-#    org.hibernate.transaction: DEBUG
-#    org.hibernate.jpa.internal: DEBUG
-#    org.hibernate.event.internal: DEBUG
-#    org.hibernate.engine.transaction.internal: DEBUG
-#    org.hibernate.internal.util: DEBUG
-    com.example.demo: DEBUG
+    root: info
+    org.springframework: info
+#    org.springframework.orm.jpa.JpaTransactionManager: debug
+#    org.springframework.transaction: trace
+    org.hibernate: info
+    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+#    org.hibernate.transaction: debug
+#    org.hibernate.jpa.internal: debug
+#    org.hibernate.event.internal: debug
+#    org.hibernate.engine.transaction.internal: debug
+#    org.hibernate.internal.util: debug
+    com.example.demo: debug
 
 my-app:
   my-module:
