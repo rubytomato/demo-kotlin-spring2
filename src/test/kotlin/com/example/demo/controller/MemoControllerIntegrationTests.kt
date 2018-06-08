@@ -27,7 +27,7 @@ class MemoControllerIntegrationTests {
     lateinit var testRestTemplate: TestRestTemplate
 
     @Test
-    fun getOne() {
+    fun getMemo() {
         val result: ResponseEntity<Memo> = testRestTemplate.getForEntity("/memo/{id}", Memo::class.java, 1L)
 
         assertThat(result).isNotNull

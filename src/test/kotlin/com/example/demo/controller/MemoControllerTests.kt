@@ -37,7 +37,7 @@ class MemoControllerTests {
             MediaType.APPLICATION_JSON.subtype, Charset.forName("utf8"))
 
     @Test
-    fun getOne() {
+    fun getMemo() {
         val expected = Memo(id = 1L, title = "test title", description = "test description", done = true)
         val expectedJson = objectMapper.writeValueAsString(expected)
         Mockito.`when`(memoService.findById(anyLong())).thenReturn(expected)

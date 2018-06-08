@@ -71,8 +71,8 @@ default - Configuration for default artifacts.
 +--- com.fasterxml.jackson.module:jackson-module-kotlin: -> 2.9.5
 |    +--- com.fasterxml.jackson.core:jackson-databind:2.9.5 (*)
 |    +--- com.fasterxml.jackson.core:jackson-annotations:2.9.0
-|    \--- org.jetbrains.kotlin:kotlin-reflect:1.2.21 -> 1.2.31
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.31
+|    \--- org.jetbrains.kotlin:kotlin-reflect:1.2.21 -> 1.2.41
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.41
 |              \--- org.jetbrains:annotations:13.0
 +--- org.springframework.boot:spring-boot-starter-data-jpa: -> 2.0.2.RELEASE
 |    +--- org.springframework.boot:spring-boot-starter:2.0.2.RELEASE (*)
@@ -119,11 +119,11 @@ default - Configuration for default artifacts.
 |    |    \--- org.slf4j:slf4j-api:1.7.25
 |    \--- org.springframework:spring-aspects:5.0.6.RELEASE
 |         \--- org.aspectj:aspectjweaver:1.8.13
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.31
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.2.31 (*)
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.31
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.31 (*)
-+--- org.jetbrains.kotlin:kotlin-reflect:1.2.31 (*)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.41
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.2.41 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.41
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.41 (*)
++--- org.jetbrains.kotlin:kotlin-reflect:1.2.41 (*)
 +--- mysql:mysql-connector-java: -> 5.1.46
 \--- org.springframework.boot:spring-boot-devtools: -> 2.0.2.RELEASE
      +--- org.springframework.boot:spring-boot:2.0.2.RELEASE (*)
