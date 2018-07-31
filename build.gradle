@@ -1,7 +1,7 @@
 buildscript {
     ext {
         kotlinVersion = "1.2.41"
-        springBootVersion = "2.0.2.RELEASE"
+        springBootVersion = "2.0.4.RELEASE"
     }
     repositories {
         mavenCentral()
@@ -23,7 +23,7 @@ apply plugin: "kotlin-kapt"
 apply plugin: 'project-report'
 
 group = "com.example"
-version = "0.0.3-SNAPSHOT"
+version = "0.0.4-SNAPSHOT"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileKotlin {
@@ -39,10 +39,10 @@ compileTestKotlin {
     }
 }
 compileJava {
-    options.compilerArgs << "-Xlint:unchecked,deprecation"
+    options.compilerArgs << "-Xlint:all"
 }
 compileTestJava {
-    options.compilerArgs << "-Xlint:unchecked,deprecation"
+    options.compilerArgs << "-Xlint:all"
 }
 
 // compileJava.dependsOn(processResources)
@@ -72,7 +72,8 @@ dependencies {
 }
 
 jar {
-    archiveName = 'demo'
+    enabled = true
+    archiveName = 'demo.jar'
 }
 
 springBoot {
