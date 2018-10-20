@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        kotlinVersion = "1.2.41"
-        springBootVersion = "2.0.4.RELEASE"
+        kotlinVersion = "1.2.71"
+        springBootVersion = "2.0.6.RELEASE"
     }
     repositories {
         mavenCentral()
@@ -23,7 +23,7 @@ apply plugin: "kotlin-kapt"
 apply plugin: 'project-report'
 
 group = "com.example"
-version = "0.0.4-SNAPSHOT"
+version = "0.0.5-SNAPSHOT"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 compileKotlin {

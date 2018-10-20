@@ -18,4 +18,21 @@ data class Memo(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long = 0
-) : Serializable
+) : Serializable {
+
+    fun merge(memo: Memo) {
+        title = memo.title
+        description = memo.description
+        done = memo.done
+    }
+
+    @PrePersist
+    fun prePersist() {
+        updated = LocalDateTime.now()
+    }
+
+    @PreUpdate
+    fun preUpdate() {
+        updated = LocalDateTime.now()
+    }
+}

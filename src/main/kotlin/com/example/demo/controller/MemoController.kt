@@ -34,6 +34,16 @@ class MemoController(
         return ResponseEntity.ok("success")
     }
 
+    @PutMapping(path = ["{id}"], produces = [MediaType.TEXT_PLAIN_VALUE], consumes = [MediaType.APPLICATION_JSON_UTF8_VALUE])
+    fun update(@PathVariable(value = "id") id: Long, @RequestBody memo: Memo): ResponseEntity<String> {
+        val updatedMemo = service.updateById(id, memo)
+        return if (updatedMemo != null) {
+            ResponseEntity.ok("success")
+        } else {
+            ResponseEntity(HttpStatus.NOT_FOUND)
+        }
+    }
+
     @DeleteMapping(path = ["{id}"], produces = [MediaType.TEXT_PLAIN_VALUE])
     fun remove(@PathVariable(value = "id") id: Long): ResponseEntity<String> {
         service.removeById(id)

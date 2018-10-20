@@ -3,10 +3,10 @@
 Development environment
 
 * Java 1.8.0
-* Kotlin 1.2.41
-* Spring Boot 2.0.4
+* Kotlin 1.2.71
+* Spring Boot 2.0.6
 * MySQL CE 5.7.19
-* Gradle 4.9
+* Gradle 4.10.2
 
 ## compile
 
@@ -53,7 +53,7 @@ curl -v "http://localhost:9000/app/memo/list?page=0&size=5"
 #### post
 
 ```text
-curl -v -H "Content-Type:application/json" -d "{\"title\": \"new memo title\", \"description\": \"new memo description\", \"done\": false }" -X POST "http://localhost:9000/app/memo"
+curl -v -H "Content-Type:application/json" -d "{\"title\": \"new memo title\", \"description\": \"new memo description\", \"done\": false}" -X POST "http://localhost:9000/app/memo"
 ```
 
 or
@@ -70,6 +70,13 @@ new_memo.json
     "description": "new memo description",
     "done": false
 }
+```
+
+
+#### put
+
+```text
+curl -v -H "Content-Type:application/json" -d "{\"title\": \"update memo title\", \"description\": \"update memo description\", \"done\": false}" -X PUT "http://localhost:9000/app/memo/1"
 ```
 
 #### delete
